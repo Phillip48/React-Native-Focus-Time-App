@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { View, Text, StyleSheet, Platform, AsyncStorage } from 'react-native';
-import { Focus } from './src/features/focus/Focus';
-import { FocusHistory } from './src/features/focus/FocusHistory';
-import { Timer } from './src/features/timer/Timer';
-import { colors } from './src/utils/colors';
+import { Focus } from './src/features/Focus';
+import { FocusHistory } from './src/features/FocusHistory';
+import { Timer } from './src/features/Timer';
+import { colors } from './src/utils/color';
 import { spacing } from './src/utils/sizes';
 
 const STATUSES = {
