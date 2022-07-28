@@ -13,7 +13,8 @@ import { Focus } from './src/features/Focus';
 import { Timer } from './src/features/Timer';
 
 export default function App() {
-  const [currentSubject, setCurrentSubject] = useState('test');
+  const [currentSubject, setCurrentSubject] = useState('');
+  const [history, setHistory] = useState([]);
   return (
     <SafeAreaView style={styles.container}>
       {!currentSubject ? (
@@ -21,8 +22,10 @@ export default function App() {
       ) : (
         <Timer
           focusSubject={currentSubject}
-          onTimerEnd={() => { }}
-          clearSubject={() => { }}
+            onTimerEnd={(subject) => {
+              setHistory([...history, subject])
+            }}
+            clearSubject={() => setCurrentSubject(null)}
         />
       )}
     </SafeAreaView>
